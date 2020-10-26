@@ -1,5 +1,6 @@
 @import "_buttons.scss";
 @import "_variables.scss";
+@import "_colors.scss";
 
 html,
 body {
@@ -10,15 +11,4 @@ body {
   font-family: "Josefin Sans", sans-serif;
   background-color: black;
   //px are no bueno, rem are relative units, 1 rem = 10px,vh or  viewport height, vw or viewport width
-}
-
-$colors: (
-  red: #d32f2f,
-  blue: #00bcd4,
-  black: #212121,
-  green: #4caf50,
-);
-
-@function color($color-name) {
-  @function map-get($colors, $color-name);
 }
