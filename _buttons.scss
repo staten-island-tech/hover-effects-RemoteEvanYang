@@ -1,7 +1,12 @@
-@import "variables.scss";
-@import "_colors.scss";
+@import "_variables.scss";
 
-.mainbutton,
-.mainbutton:link,
-.mainbutton:visited {
+.button,
+.button:link,
+.button:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5rem 5rem;
+}
+
+.mainbutton {
 }

@@ -1,14 +1,14 @@
 @import "_buttons.scss";
 @import "_variables.scss";
-@import "_colors.scss";
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 62.5%;
-  font-family: "Josefin Sans", sans-serif;
-  background-color: black;
-  //px are no bueno, rem are relative units, 1 rem = 10px,vh or  viewport height, vw or viewport width
+.container {
+  width: 80vw;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+  font-size: 1.5rem;
+  align-items: center;
+  text-align: center;
 }
