@@ -4,8 +4,8 @@
     "sources": [
         "style.scss",
         "_buttons.scss",
-        "_variables.scss",
-        "_variables.scss"
+        "_colors.scss",
+        "_colors.scss"
     ],
     "names": [],
     "file": "style.css"
