@@ -7,26 +7,46 @@ body {
           box-sizing: border-box;
 }
 
-.button,
-.button:link,
-.button:visited {
+.button {
+  background: none;
+  border: 0.25rem solid;
+  font: inherit;
+  line-height: 1;
+  margin: 2rem;
+  padding: 2.25rem 4rem;
+  font-size: 2rem;
   text-transform: uppercase;
-  text-decoration: none;
-  padding: 2.5rem 4rem;
-  background-color: black;
-  margin: 2rem auto;
-  font-size: 3rem;
-  border-radius: 10rem;
+  font-weight: 525;
+  color: var(--color);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
-.button-black {
-  background-color: #212121;
-  color: #ff5722;
+.button:hover, .button:focus {
+  border-color: var(--hover);
+  color: #fff;
 }
 
-.button:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--hover);
+            box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--hover);
+            box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+.firstbutton:hover,
+.firstbutton:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  -webkit-box-shadow: 0 0 0 2rem #212121;
+          box-shadow: 0 0 0 2rem #212121;
 }
 
 html,
