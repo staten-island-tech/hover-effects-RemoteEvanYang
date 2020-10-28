@@ -1,8 +1,10 @@
 @import "_variables.scss";
 
-.button {
+.button,
+.button:link,
+.button:visited {
   background: none;
-  border: 0.25rem solid;
+  border: 0.3rem solid;
   font: inherit;
   line-height: 1;
   margin: 2rem;
@@ -10,25 +12,62 @@
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 525;
+  box-shadow: 0 0 0 0 #ffffff;
+}
 
-  color: var(--color);
-  transition: 0.25s;
+.firstbutton {
+  box-shadow: inset 0px 0px 0px color(red);
+  transition: all 0.25s;
+}
+
+.firstbutton:hover {
+  background: color(red);
+  box-shadow: inset 150px 0px 0px color(red);
+  animation: pulse-white 2s infinite;
+}
+
+@keyframes pulse-white {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #ffffffb3;
+  }
+
+  25% {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 0 #ffffffb3;
+  }
+
+  50% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 10px #ffffff00;
+  }
+
+  75% {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 10px #ffffff00;
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #ffffff00;
+  }
+}
+
+.secondbutton {
+  box-shadow: 0.3em 0.3em 0 0 color(blue), inset 0.3em 0.3em 0 0 color(blue);
 
   &:hover,
   &:focus {
-    border-color: var(--hover);
-    color: #fff;
+    box-shadow: 0 0 0 0 color(blue), inset 6em 3.5em 0 0 color(blue);
   }
+  transition: 0.3s;
+}
+.thirdbutton {
+  transition: 3s;
 }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 var(--hover);
-  }
-}
-
-.firstbutton:hover,
-.firstbutton:focus {
-  animation: pulse 1s;
-  box-shadow: 0 0 0 2rem color(black);
+.thirdbutton:hover,
+.thirdbutton:focus {
+  box-shadow: inset -14rem 0 0 0 color(green), inset 14rem 0 0 0 color(green);
+  transform: scale(1.3);
 }
